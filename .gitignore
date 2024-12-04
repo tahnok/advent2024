@@ -1,3 +1,2 @@
 venv/
-input.txt
-sample.txt
+*.txt
