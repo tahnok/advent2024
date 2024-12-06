@@ -13,8 +13,9 @@ def main():
     dir = Path.cwd() / f"day_{day}"
     print(f"created {dir}")
     dir.mkdir(exist_ok=True)
-    (dir / "part_1.py").touch()
-    (dir / "part_2.py").touch()
+    template = Path("template.py").read_text()
+    (dir / "part_1.py").write_text(template)
+    (dir / "part_2.py").write_text(template)
 
 if __name__ == '__main__':
     main()
