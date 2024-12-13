@@ -15,7 +15,7 @@ def main():
     dir.mkdir(exist_ok=True)
     template = Path("template.py").read_text()
     (dir / "part_1.py").write_text(template)
-    (dir / "part_2.py").write_text(template)
+    (dir / "part_2.py").touch()
 
 if __name__ == '__main__':
     main()
